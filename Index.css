@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:Regular@&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Navbar */
+.header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255,255,255);
+    background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(148,187,233,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 10;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 40px;
+
+}
+.header .logo img{
+    width: 55%;
+    border-radius: 100%;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.navbar a{
+    text-transform: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.hamburger-menu{
+    display: none;
+}
+
+/*  Carosel */
+.carousel{
+    padding-top: 50px;
+}
+.carousel-item{
+    align-items: center;
+}
+.carousel-item img{
+    width: 100%;
+    height: 100vh;
+}
+.carousel-caption {
+    bottom: 80px !important;
+  }
+.carousel-caption h1{
+    font-weight: 700;
+    font-size: 50px;
+    text-align: left;
+    font-style: italic;
+}
+.carousel-caption p{
+    font-weight: 700;
+}
+.carousel-caption button{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #131E37;
+    background-color: #131E37;
+    color: #ffffff;
+
+}
+.carousel-caption button:hover{
+    background-color: #ffffff;
+    color: #131E37;
+}
+
+/* collapsibble card  */
+.module {
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;  
+}
+.module p{
+    font-size: 13px;
+    text-align: center;
+}
+  
+.card-header{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 0;
+}
+.card-header h5{
+    text-align: center;
+    font-size: 19px;
+}
+.card-header p{
+    font-size: 15px;
+    text-align: center;
+}
+.card-icon{
+    margin: 10px auto;
+    font-size: 40px;
+    color: #008000;
+}
+.collapse{
+    padding: 10px;
+    text-align: center;
+}
+.module a{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #131E37;
+    background-color: #131E37;
+    border-radius: 15px;
+    padding: 8px 10px;
+}
+  
+#module1 a.collapsed:after {
+    content: 'Read More';
+}
+  
+#module1 a:not(.collapsed):after {
+    content: 'Read Less';
+}
+
+#module2 a.collapsed:after {
+    content: 'Read More';
+}
+  
+#module2 a:not(.collapsed):after {
+    content: 'Read Less';
+}
+
+#module3 a.collapsed:after {
+    content: 'Read More';
+}
+  
+#module3 a:not(.collapsed):after {
+    content: 'Read Less';
+}
+  
+#module1 #collapse1.collapse:not(.show) {
+    display: block;
+    height: 9em;
+    overflow: hidden;
+}
+  
+#module1 #collapse1.collapsing {
+    height: 9em;
+}
+#module2 #collapse2.collapse:not(.show) {
+    display: block;
+    height: 9em;
+    overflow: hidden;
+}
+  
+#module2 #collapse2.collapsing {
+    height: 9em;
+}
+
+#module3 #collapse3.collapse:not(.show) {
+    display: block;
+    height: 9em;
+    overflow: hidden;
+}
+  
+#module3 #collapse3.collapsing {
+    height: 9em;
+}
+
+/* Services and Popular destinations in India */
+.services{
+    width: 100%;
+    height: 100vh;
+}
+.header-content{
+    margin-top: 20px;
+}
+.header-content h3{
+    text-align: center;
+    font-weight: 700;
+}
+.header-content p{
+    text-align:center;
+    font-style: italic;
+    font-size: 20px;
+}
+
+  /* Service card container*/
+.service-card-container{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Popular Image container */
+.popular-image-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+.left-side-image{
+    width: 48%;
+   
+}
+#left-side1{
+    background-image: url("./Resources/AmritsarPunjab.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#left-side1::after{
+    content: "Amritsar, Punjab";
+    position: absolute;
+    margin-top: 513px;
+    margin-left: 150px;
+    color: #fff;
+    font-size: 36px;
+}
+.right-side-image{
+    width: 48%;
+}
+#right-side1{
+    height: 50vh;
+    width: 100%;
+    
+    background-image: url("./Resources/GangtokSikkim.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+#right-side1::after{
+    content: "Gangtok, Sikkim";
+    position: absolute;
+    margin-top: 213px;
+    margin-left: 150px;
+    color: #fff;
+    font-size: 36px;
+}
+#right-side2{
+    height: 50vh;
+    width: 100%;
+    margin-top: 10px;
+    background-image: url("./Resources/AgraUttarPradesh.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#right-side2::after{
+    content: "Agra Uttar Pradesh";
+    position: absolute;
+    margin-top: 213px;
+    margin-left: 150px;
+    color: #fff;
+    font-size: 36px;
+}
+
+/* Popular Destination International */
+#left-side11{
+    background-image: url("./Resources/DUBAI.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#left-side11::after{
+    content: "DUBAI";
+    position: absolute;
+    margin-top: 513px;
+    margin-left: 250px;
+    color: #fff;
+    font-size: 36px;
+}
+#right-side11{
+    height: 50vh;
+    width: 100%;
+    
+    background-image: url("./Resources/SYDNEY.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+#right-side11::after{
+    content: "SYDNEY";
+    position: absolute;
+    margin-top: 213px;
+    margin-left: 250px;
+    color: #fff;
+    font-size: 36px;
+}
+#right-side12{
+    height: 50vh;
+    width: 100%;
+    margin-top: 10px;
+    background-image: url("./Resources/SINGAPORE.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#right-side12::after{
+    content: "SINGAPORE";
+    position: absolute;
+    margin-top: 213px;
+    margin-left: 250px;
+    color: #fff;
+    font-size: 36px;
+}
+.destination-button{
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    margin-top: 200px;
+}
+#allButton{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #131E37;
+    background-color: #131E37;
+    color: #ffffff;
+}
+#allButton:hover{
+    background-color: #ffffff;
+    color: #131E37;
+}
+
+
+/* FEATURED TOURS IN INDIA */
+#left-side21{
+    background-image: url("./Resources/ThikseyMonastery.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    content: "Week At Thiksey Monastery";
+}
+#left-side21::after{
+    content: "DUBAI";
+    position: absolute;
+    margin-top: 513px;
+    margin-left: 250px;
+    color: #fff;
+    font-size: 36px;
+}
+#right-side21{
+    height: 50vh;
+    width: 100%; 
+    background-image: url("./Resources/SolangValleyManali.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+#right-side21::after{
+    content: "SYDNEY";
+    position: absolute;
+    margin-top: 213px;
+    margin-left: 250px;
+    color: #fff;
+    font-size: 36px;
+}
+#right-side22{
+    height: 50vh;
+    width: 100%;
+    margin-top: 10px;
+    background-image: url("./Resources/Goa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#right-side22::after{
+    content: "SINGAPORE";
+    position: absolute;
+    margin-top: 213px;
+    margin-left: 250px;
+    color: #fff;
+    font-size: 36px;
+}
+
+
+/* FEATURED TOURS IN INDIA */
+
+.left-side-image-content{
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.left-side-img{
+    width: 100%;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-side-content{
+    width: 100%;
+    height: 50%;
+    padding: 15px;
+}
+
+
+.right-side-image-content{
+    width: 53%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.right-side23, .right-side24{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-sub-image1, .right-sub-image2{
+    width: 48%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.right-sub-content1, .right-sub-content2{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    
+}
+.item1{
+    font-size: 24px;
+}
+.item2{
+    font-size: 19px;
+    font-style: italic;
+}
+.item3{
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+
+
+/* FEATURED TOURS IN INDIA */
+
+.left-side-image-content{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.left-side25, .left-side26{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-sub-image1, .left-sub-image2{
+    width: 48%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.left-sub-content1, .left-sub-content2{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    
+}
+
+.right-side-image-content{
+    width: 53%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.right-side-img{
+    width: 100%;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-side-content{
+    width: 100%;
+    height: 50%;
+    padding: 15px;
+}
+
+
+/*  Gallery */
+.gallery{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.gallery-card{
+    height: 350px;
+    width: 250px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.gallery-image{
+    height: 85%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gallery-image-text{
+    height: 15%;
+    width: 100%;
+    background-color: #2C6E82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Meadia Query */
+@media only screen and (max-width: 600px) {
+    .header{
+        width: 100%;
+        /* height: 80vh; */
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .header .logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+    }
+    .header .logo img{
+        width: 15%;
+        margin: 10px 10px;
+    }
+    .hamburger-menu{
+        display: block;
+        font-size: 24px;
+        margin-right: 20px;
+        padding:4px 20px ;
+        border: 1px solid #908f8f;
+        border-radius: 8px;
+    }
+    .navbar{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 0;
+        height: 100%;
+    }
+    .services {
+        height: auto;
+    }
+
+    .service-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popular-image-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .left-side-image{
+        width: 100%;
+        height: 100vh;
+       
+    }
+
+    .right-side-image{
+        width: 100%;
+        height: auto;
+    margin-top: 10px;
+    }
+
+    #right-side1,  #right-side2{
+  height: 70vh;
+  width: 100%;
+  
+    
+    }
+    #left-side1::after{
+        content: "Amritsar, Punjab";
+        position: absolute;
+        margin-top: 200px;
+        margin-left: 150px;
+        color: #fff;
+        font-size: 36px;
+    }
+
+    .left-side-image-content {
+        width: 100%;
+        height: 100vh;
+    }
+    .bootom-image-container{
+        flex-direction: row;
+    }
+
+}
